@@ -47,13 +47,12 @@
     /* flex: 1; Take up remaining space */
     text-align: center;
     width: 20%;
-  }
-  .tag{
     border: 2px solid black;
     border-radius: 20px;
     background: #f9f9f9;
     padding: 4px;
-    }
+  }
+  
     @media screen and (max-width: 700px) {
       .search-results-container {
         width: 90%; /* Set the maximum width of the container */

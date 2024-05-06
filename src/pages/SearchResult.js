@@ -1,7 +1,10 @@
 import React from 'react';
 import './SearchResult.css';
+import Input from '../components/Input';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-function SearchResults({ searchResults, query }) {
+function SearchResults({ searchResults, query,setQuery,handleFormSubmit }) {
   return (
     <div className="search-results-container">
       {/* Header section */}
@@ -16,10 +19,14 @@ function SearchResults({ searchResults, query }) {
           <span className="e">e</span>
         </h1>
         {/* Search query */}
-        <div className="query">
-          <p className='tag'>{query}</p>
+        <div className=" search-bar">
+        <div className="search-icon">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </div>
+        <Input query={query} setQuery={setQuery} handleFormSubmit={handleFormSubmit}/>
         </div>
-        <div style={{flex:'1'}}></div> {/* This div is for spacing */}
+        <div style={{flex:'1'}}></div> 
+        {/* This div is for spacing */}
       </div>
       
       {/* Search results */}

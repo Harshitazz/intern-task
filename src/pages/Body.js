@@ -10,24 +10,10 @@ import {
   faGrip,
   faCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import Input from "../components/Input";
 
 function Body({ query, setQuery, handleFormSubmit }) {
-  const navigate = useNavigate();
-  const handleChange = (e) => {
-    setQuery(e.target.value); // Update query state as the user types
-  };
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      handleFormSubmit(e); // Pass the event object to handleFormSubmit
-      redirectToSearchResults(); // Redirect to search results page
-
-    }
-  };
-  const redirectToSearchResults = () => {
-    // Redirect to search results page with the query parameter
-    navigate(`/search?query=${encodeURIComponent(query)}`);
-  };
 
   return (
     <>
@@ -57,16 +43,7 @@ function Body({ query, setQuery, handleFormSubmit }) {
           <div className="search-icon">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
-          <form onSubmit={handleFormSubmit}>
-          <input
-              id="input"
-              type="text"
-              value={query}
-              onChange={handleChange} // Handle input change
-              onKeyDown={handleKeyDown} // Handle Enter key press
-              placeholder="Search Google or type a URL"
-            />
-          </form>
+          <Input query={query} setQuery={setQuery} handleFormSubmit={handleFormSubmit}/>
           <div className="icons">
             <FontAwesomeIcon icon={faMicrophone} style={{ color: "#34a853" }} />
             <FontAwesomeIcon icon={faCamera} style={{ color: "#4285f4" }} />

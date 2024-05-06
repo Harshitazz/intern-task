@@ -60,7 +60,7 @@ function App() {
       <Routes>
 
       <Route path="/" element={<Body query={query} setQuery={setQuery} handleFormSubmit={handleFormSubmit} /> } />
-      <Route path="/search" element={<SearchResult searchResults={searchResults} query={query} /> } />
+      <Route path="/search" element={<SearchResult searchResults={searchResults} query={query} setQuery={setQuery} handleFormSubmit={handleFormSubmit}/> } />
     
       
       </Routes>
