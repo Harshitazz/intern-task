@@ -1,0 +1,125 @@
+.google-text {
+  font-family: "Product Sans", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 6rem;
+  margin: 2rem;
+}
+
+.g {
+  color: #4285f4; /* Blue */
+}
+
+.o1 {
+  color: #ea4335; /* Red */
+}
+
+.o2 {
+  color: #fbbc05; /* Yellow */
+}
+
+.g2 {
+  color: #4285f4; /* Blue */
+}
+
+.l {
+  color: #34a853; /* Green */
+}
+
+.e {
+  color: #ea4335; /* Red */
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--ntp-one-google-bar-height));
+  min-width: fit-content;
+  padding-top: var(--ntp-one-google-bar-height);
+  position: relative;
+  z-index: 1;
+  margin-top: 6rem;
+}
+
+#inputWrapper {
+  height: 100%;
+  position: relative;
+}
+#input {
+  background-color: transparent;
+  border: none;
+  border-radius: var(--cr-realbox-border-radius);
+  color: var(--color-realbox-foreground);
+  font-family: inherit;
+  font-size: inherit;
+  height: 100%;
+  outline: 0;
+  position: relative;
+  width: 400px;
+}
+
+#input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+/* search */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 12px;
+  /* width: 500px; */
+  margin: 10px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icons i {
+  margin-left: 8px;
+  color: #70757a;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color: #4285f4; /* Change color on hover */
+}
+
+.navul {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  margin: 0;
+  padding: 2px;
+  list-style-type: none;
+  color: #575757;
+  flex-grow: 1; /* Allow the navigation bar to grow to fill available space */
+  flex-shrink: 1;
+  align-items: center;
+}
+.nav-li{
+  margin: auto 1px;
+  padding: 7px;
+  cursor: pointer;
+
+}
+.nav-img:hover{
+  background: rgb(208, 208, 208);
+  border-radius: 50%;
+}
